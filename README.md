@@ -8,7 +8,7 @@
 
 ## Usage
 
-	simple_popup: 1.0.0
+	simple_popup: 1.0.1
 	
 	import 'package:simple_popup/simple_popup.dart';
 	

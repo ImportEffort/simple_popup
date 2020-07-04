@@ -1,6 +1,6 @@
 name: simple_popup
 description: A Simple popup, supported both iOS and Android.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Xigtun/simple_popup
 
 # The following line prevents the package from being accidentally published to

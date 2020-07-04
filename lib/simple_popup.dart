@@ -72,7 +72,10 @@ class _PopupWidgetState extends State<PopupWidget>
           alignment: Alignment.bottomCenter,
           child: SlideTransition(
             position: offset,
-            child: this.widget.child,
+            child: GestureDetector(
+              onTap: (){},
+              child:this.widget.child,
+            )
           ),
         ),
       ),
