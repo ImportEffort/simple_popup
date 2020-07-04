@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+import 'package:simple_popup/simple_popup.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: FlatButton(child: Text('Show', style: TextStyle(color: Colors.white),), color: Colors.lightBlue, onPressed: (){
+          Popup.show(context: context,
+              child: Container(
+            height: 400,
+            color: Colors.red,
+            child: Center(
+              child: FlatButton(child: Text('Hide'), color: Colors.lightGreen, onPressed: (){
+                Popup.dismiss();
+              },),
+            ),
+          ));
+        },),
+      ),
+    );
+  }
+}
